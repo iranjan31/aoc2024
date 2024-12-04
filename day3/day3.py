@@ -7,7 +7,6 @@ with open('day3_input.txt', 'r') as file:
 # Calculate the total sum of the valid multiplication instructions
 total = sum(int(x) * int(y) for x, y in re.findall(r'\bmul\((\d{1,3}),(\d{1,3})\)', corrupted_memory))
 
-# Step 5: Print the result
 print("Total sum of valid mul instructions:", total)
 
 mul_enabled = True  # Mul instructions are enabled by default
@@ -33,5 +32,4 @@ while index < len(corrupted_memory):
         # Skip invalid or unimportant characters
         index += 1
 
-# Step 5: Output the total sum
 print("Total sum of enabled mul instructions:", total)
